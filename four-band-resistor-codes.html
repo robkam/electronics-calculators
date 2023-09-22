@@ -4,10 +4,16 @@
     <title>Four band resistor color code calculator</title>
 </head>
 <body>
+    <!-- 
+        Four band resistor color code calculator
+        This web page allows users to calculate the resistance value of a four-band resistor based on color codes.
+        Author: Rob Kam
+        License: CC-BY-SA-4.0 (Creative Commons Attribution-ShareAlike 4.0 International License)
+    -->
     <h2>Four band resistor color code calculator</h2>
     <form id="calculator-form">
-        <label for="band1">Band 1 Color:</label>
-        <select id="band1">
+        <label for="band1">Band 1, tens:</label>
+        <select id="band1" onchange="calculateResistance()">
             <option value="0">Black (0)</option>
             <option value="1">Brown (1)</option>
             <option value="2">Red (2)</option>
@@ -20,8 +26,8 @@
             <option value="9">White (9)</option>
         </select>
 
-        <label for="band2">Band 2 Color:</label>
-        <select id="band2">
+        <label for="band2">Band 2, units:</label>
+        <select id="band2"" onchange="calculateResistance()">
             <option value="0">Black (0)</option>
             <option value="1">Brown (1)</option>
             <option value="2">Red (2)</option>
@@ -34,8 +40,8 @@
             <option value="9">White (9)</option>
         </select>
 
-        <label for="band3">Band 3 Multiplier:</label>
-        <select id="band3">
+        <label for="band3">Band 3, multiplier:</label>
+        <select id="band3"" onchange="calculateResistance()">>
             <option value="1">Black (x 1)</option>
             <option value="10">Brown (x 10)</option>
             <option value="100">Red (x 100)</option>
@@ -48,12 +54,12 @@
             <option value="1000000000">White (x 1 G)</option>              
         </select>
 
-        <label for="band4">Band 4 Tolerance:</label>
-        <select id="band4">
+        <label for="band4">Band 4, tolerance:</label>
+        <select id="band4"" onchange="calculateResistance()">
             <option value="5">Gold (5%)</option>
         </select>
 
-        <button type="button" onclick="calculateResistance()">Calculate</button>
+        <!-- <button type="button" onclick="calculateResistance()">Calculate</button> -->
     </form>
 
     <p>Resistance Value: <span id="result"></span></p>
