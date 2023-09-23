@@ -7,5 +7,3 @@ Specific function web page calculators for electronic engineering. HTML, CSS and
 These all need some improvement. Use at your own risk.
 
 If you want to fix or improve something, please do a pull request.
-
-
