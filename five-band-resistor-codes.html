@@ -1,111 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Five band resistor color code calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 
         Five band resistor color code calculator
         This web page allows users to calculate the resistance value of a five-band resistor based on color codes.
         Author: Rob Kam
         License: CC-BY-SA-4.0 (Creative Commons Attribution-ShareAlike 4.0 International License)
-    -->	
+    -->
     <h2>Five band resistor color code calculator</h2>
     <form id="calculator-form">
-        <label for="band1">Band 1, hundreds:</label>
-        <select id="band1" onchange="calculateResistance()">
-            <option value="0">Black (0)</option>
-            <option value="1">Brown (1)</option>
-            <option value="2">Red (2)</option>
-            <option value="3">Orange (3)</option>
-            <option value="4">Yellow (4)</option>
-            <option value="5">Green (5)</option>
-            <option value="6">Blue (6)</option>
-            <option value="7">Violet (7)</option>
-            <option value="8">Grey (8)</option>
-            <option value="9">White (9)</option>
-        </select>
+      <label for="band1">Band 1, hundreds:</label>
+      <select id="band1" onchange="calculateResistance()">
+        <option value="0">Black (0)</option>
+        <option value="1">Brown (1)</option>
+        <option value="2">Red (2)</option>
+        <option value="3">Orange (3)</option>
+        <option value="4">Yellow (4)</option>
+        <option value="5">Green (5)</option>
+        <option value="6">Blue (6)</option>
+        <option value="7">Violet (7)</option>
+        <option value="8">Grey (8)</option>
+        <option value="9">White (9)</option>
+      </select>
 
-        <label for="band2">Band 2, tens:</label>
-        <select id="band2" onchange="calculateResistance()">
-            <option value="0">Black (0)</option>
-            <option value="1">Brown (1)</option>
-            <option value="2">Red (2)</option>
-            <option value="3">Orange (3)</option>
-            <option value="4">Yellow (4)</option>
-            <option value="5">Green (5)</option>
-            <option value="6">Blue (6)</option>
-            <option value="7">Violet (7)</option>
-            <option value="8">Grey (8)</option>
-            <option value="9">White (9)</option>
-        </select>
+      <label for="band2">Band 2, tens:</label>
+      <select id="band2" onchange="calculateResistance()">
+        <option value="0">Black (0)</option>
+        <option value="1">Brown (1)</option>
+        <option value="2">Red (2)</option>
+        <option value="3">Orange (3)</option>
+        <option value="4">Yellow (4)</option>
+        <option value="5">Green (5)</option>
+        <option value="6">Blue (6)</option>
+        <option value="7">Violet (7)</option>
+        <option value="8">Grey (8)</option>
+        <option value="9">White (9)</option>
+      </select>
 
-        <label for="band3">Band 3, units:</label>
-        <select id="band3" onchange="calculateResistance()">
-            <option value="0">Black (0)</option>
-            <option value="1">Brown (1)</option>
-            <option value="2">Red (2)</option>
-            <option value="3">Orange (3)</option>
-            <option value="4">Yellow (4)</option>
-            <option value="5">Green (5)</option>
-            <option value="6">Blue (6)</option>
-            <option value="7">Violet (7)</option>
-            <option value="8">Grey (8)</option>
-            <option value="9">White (9)</option>
-        </select>
+      <label for="band3">Band 3, units:</label>
+      <select id="band3" onchange="calculateResistance()">
+        <option value="0">Black (0)</option>
+        <option value="1">Brown (1)</option>
+        <option value="2">Red (2)</option>
+        <option value="3">Orange (3)</option>
+        <option value="4">Yellow (4)</option>
+        <option value="5">Green (5)</option>
+        <option value="6">Blue (6)</option>
+        <option value="7">Violet (7)</option>
+        <option value="8">Grey (8)</option>
+        <option value="9">White (9)</option>
+      </select>
 
-        <label for="band4">Band 4, multiplier:</label>
-        <select id="band4" onchange="calculateResistance()">
-            <option value="1">Black (x 1)</option>
-            <option value="10">Brown (x 10)</option>
-            <option value="100">Red (x 100)</option>
-            <option value="1000">Orange (x 1 k)</option>
-            <option value="10000">Yellow (x 10 k)</option>
-            <option value="100000">Green (x 100 k)</option>
-            <option value="1000000">Blue (x 1 M)</option>
-            <option value="10000000">Violet (x 10 M)</option>
-            <option value="100000000">Grey (x 100 M)</option>
-            <option value="1000000000">White (x 1 G)</option>                        
-            <option value="0.1">Gold (x (1/10))</option>
-            <option value="0.01">Silver (x (1/100))</option>
-        </select>
+      <label for="band4">Band 4, multiplier:</label>
+      <select id="band4" onchange="calculateResistance()">
+        <option value="1">Black (x 1)</option>
+        <option value="10">Brown (x 10)</option>
+        <option value="100">Red (x 100)</option>
+        <option value="1000">Orange (x 1 k)</option>
+        <option value="10000">Yellow (x 10 k)</option>
+        <option value="100000">Green (x 100 k)</option>
+        <option value="1000000">Blue (x 1 M)</option>
+        <option value="10000000">Violet (x 10 M)</option>
+        <option value="100000000">Grey (x 100 M)</option>
+        <option value="1000000000">White (x 1 G)</option>
+        <option value="0.1">Gold (x (1/10))</option>
+        <option value="0.01">Silver (x (1/100))</option>
+      </select>
 
-        <label for="band5">Band 5, tolerance:</label>
-        <select id="band5">
-            <option value="1">Brown (1%)</option>
-        </select>
+      <label for="band5">Band 5, tolerance:</label>
+      <select id="band5">
+        <option value="1">Brown (1%)</option>
+      </select>
 
-        <!-- <button type="button" onclick="calculateResistance()">Calculate</button> -->
+      <!-- <button type="button" onclick="calculateResistance()">Calculate</button> -->
     </form>
 
     <p>Resistance Value: <span id="result"></span></p>
 
     <script>
-        function calculateResistance() {
-            let band1Value = parseFloat(document.getElementById('band1').value);
-            let band2Value = parseFloat(document.getElementById('band2').value);
-            let band3Value = parseFloat(document.getElementById('band3').value);
-            let band4Value = parseFloat(document.getElementById('band4').value);
-            
-            let resistance = ((band1Value * 100) + (band2Value * 10) + band3Value) * parseFloat(band4Value);
-            
-            let unit = "Ω";
-            if (resistance >= 1000000000) {
-                resistance /= 1000000000;
-                unit = "GΩ";
-            } else if (resistance >= 1000000) {
-                resistance /= 1000000;
-                unit = "MΩ";
-            } else if (resistance >= 1000) {
-                resistance /= 1000;
-                unit = "kΩ";
-            }
-        
-            document.getElementById("result").textContent = resistance.toFixed(2).replace(/\.?0*$/, "") + " " + unit;
+      function calculateResistance() {
+        let band1Value = parseFloat(document.getElementById("band1").value);
+        let band2Value = parseFloat(document.getElementById("band2").value);
+        let band3Value = parseFloat(document.getElementById("band3").value);
+        let band4Value = parseFloat(document.getElementById("band4").value);
+
+        let resistance =
+          (band1Value * 100 + band2Value * 10 + band3Value) *
+          parseFloat(band4Value);
+
+        let unit = "Ω";
+        if (resistance >= 1000000000) {
+          resistance /= 1000000000;
+          unit = "GΩ";
+        } else if (resistance >= 1000000) {
+          resistance /= 1000000;
+          unit = "MΩ";
+        } else if (resistance >= 1000) {
+          resistance /= 1000;
+          unit = "kΩ";
         }
+
+        document.getElementById("result").textContent =
+          resistance.toFixed(2).replace(/\.?0*$/, "") + " " + unit;
+      }
     </script>
-</body>
+  </body>
 </html>
-
-    <script>
-
